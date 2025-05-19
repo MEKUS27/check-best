@@ -1,0 +1,34 @@
+@import "../../reponsive.scss";
+
+.listPage {
+    display: flex;
+    height: 100%;
+    
+    @include md {
+        flex-direction: column;
+        padding-bottom: 1000px;
+        overflow: scroll;
+        height:max-content;
+      }
+
+    .listContainer{
+        flex: 3;
+        height: 100%;
+        padding-top: 20px;
+
+        .wrapper {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+    }
+    .mapContainer{
+        flex: 2;
+        height: 100%;
+        background-color: #fcf5f3;
+        
+    }
+}
