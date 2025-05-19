@@ -15,9 +15,9 @@ function Navbar() {
         <a className="first" href="/">
           Home
         </a>
-        <a href="/">About</a>
-        <a href="/">Contact</a>
-        <a href="/">Agents</a>
+        <a href="/list">About</a>
+        <a href="/:id">Contact</a>
+        <a href="/profile">Agents</a>
       </div>
       <div className="right">
         {user ? (
@@ -47,9 +47,9 @@ function Navbar() {
         </div>
         <div className={open ? "menu active" : "menu"}>
           <a href="/">Home</a>
-          <a href="/">About</a>
-          <a href="/">Contact</a>
-          <a href="/">Agents</a>
+          <a href="/list">About</a>
+          <a href="/:id">Contact</a>
+          <a href="/profile">Agents</a>
           <a href="/">Sign in</a>
           <a href="/">Sign up</a>
         </div>
