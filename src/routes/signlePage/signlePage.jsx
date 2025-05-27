@@ -2,122 +2,100 @@ import "./signlePage.scss";
 import Slider from "../../components/slider/Slider";
 import Map from "../../components/map/Map";
 import { singlePostData, userData } from "../../lib/dummydata";
+import Chat from "../../components/chat/Chat";
+import { RiHeartAdd2Line } from "react-icons/ri";
+import { BsShareFill } from "react-icons/bs";
+import { FaChevronRight } from "react-icons/fa";
+import Option from "../../components/option/option";
+
+
 
 function SignlePage() {
   return (
-    <div className="signlePage">
-      <div className="details">
-        <div className="wrapper">
-          <Slider images={singlePostData.images} />
-          <div className="info">
-            <div className="top">
-              <div className="post">
-                <h1>{singlePostData.title}</h1>
-                <div className="address">
-                  <img src="/pin.png" alt="" />
-                  <span>{singlePostData.address}</span>
+    <>
+      <div className="upper_detail">
+        <div className="holder">
+          <div className="left">
+            <ul>
+              <li>Home  <FaChevronRight /></li>
+              <li>Shops for sale/rent in Ariaria <FaChevronRight /></li> 
+              <li>Shops for sale/rent in Faulks Rd <FaChevronRight /></li> 
+              <li>Aba Abia State</li> 
+            </ul>
+          </div>
+          <div className="right">
+           <Option />
+          </div>
+        </div>
+
+      </div>
+
+      <div className="signlePage">
+        <div className="details">
+          <div className="wrapper">
+            <Slider images={singlePostData.images} />
+            <div className="info">
+            <h1>{singlePostData.title}</h1>
+
+              <div className="top">
+                <div className="post">
+                <div className="price">₦ 2,000,000</div>
+
+                  <div className="address">
+                    <img src="/pin.png" alt="" />
+                    <span>{singlePostData.address}</span>
+                  </div>
                 </div>
-                <div className="price">₦ {singlePostData.price}</div>
-              </div>
-              <div className="user">
+                {/* <div className="user">
                 <img src={userData.img} alt="" />
                 <span>{userData.name}</span>
+              </div> */}
               </div>
-            </div>
-            <div className="bottom">{singlePostData.description}</div>
-          </div>
-        </div>
-      </div>
-      <div className="features">
-        <div className="wrapper">
-          <p className="title">General</p>
-          <div className="listVerticel">
-            <div className="feature">
-              <img src="/utility.png" alt="" />
-              <div className="featureText">
-                <span>Utilities</span>
-                <p>Fire Safety</p>
-                <p>Location Advantage</p>
-              </div>
-            </div>
-           
-            <div className="feature">
-              <img src="/utility.png" alt="" />
-              <div className="featureText">
-                <span>Utilities</span>
-                <p>Renter is resposible</p>
-              </div>
-            </div>
-            <div className="feature">
-              <img src="/utility.png" alt="" />
-              <div className="featureText">
-                <span>Utilities</span>
-                <p>Renter is resposible</p>
-              </div>
-            </div>
-          </div>
-
-          <p className="title">Sizes</p>
-            <div className="sizes">
-            <div className="size">
+              <div className="bottom">
               
-              <img src="/size.png" alt="" />
-              <span>80 sqft</span>
-            </div>
-            <div className="size">
-              <img src="/bath.png" alt="" />
-              <span>1 restroom</span>
-            </div>
-            <div className="size">
-              <img src="/bed.png" alt="" />
-              <span>bedroom</span>
-            </div>
-            </div>
-           
-          
+                <div>
+                <div className="details">
+                  <h3>Shop Details</h3>
+                  <ul>
+                    <li>Size: 230 Sqm in sqaure metters</li>
+                    <li>Power/water supply</li>
+                    <li>Parking space avaliablilty</li>
+                    <li>Toilt avaliablilty</li>
+                    <li>Accessibility (road access, wheelchair access, etc.)</li>
+                    <li>Nearby landmark (close to bus stop, main market.)</li>
+                  </ul>
+                </div>
 
-          <p className="title">Nearby Places </p>
-          <div className="listHorizontal">
-            <div className="feature">
-            <img src="/school.png" alt="" />
-               <div className="featureText">
-               <span>School</span>
-               <p>250m away</p>
-               </div>
-            </div>
-            <div className="feature">
-            <img src="/pet.png" alt="" />
-               <div className="featureText">
-               <span>Bus Stop</span>
-               <p>100m away</p>
-               </div>
-            </div>
-            <div className="feature">
-            <img src="/fee.png" alt="" />
-               <div className="featureText">
-               <span>Restaurant</span>
-               <p>200m away</p>
-               </div>
-            </div>
-            </div>
+                <div className="details">
+                  <h3>Shop Condition</h3>
+                  <ul>
+                    <li>Newly built</li>
+                    <li>Ready to move in </li>
+                  </ul>
+                </div>
+                </div>
 
-          <p className="title">Location</p>
-          <div className="mapContainer">
-            <Map items={[singlePostData]} />
-          </div>
-          <div className="buttons">
-            <button>
-              <img src="/chat.png" alt="" />
-              Send a Message
-            </button>
-            <button>
-              <img src="/save.png" alt="" />
-              Save the Place
-            </button>
+                <div className="mapContainer">
+                <Map items={[singlePostData]} />
+              </div>
+                
+
+                {/* <h3>Description</h3>
+              <p>{singlePostData.description}</p> */}
+              </div>
+            </div>
+            <div className="wrapper">
+                  <div>
+                    <a href="/payment"><button className="rent">Rent Shop</button></a>
+                  </div>
+            </div>
           </div>
         </div>
+        <div className="features">
+          <Chat />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

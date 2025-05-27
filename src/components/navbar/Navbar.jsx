@@ -1,60 +1,81 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./navbar.scss";
+// import { assets } from "../assets/assets";
+// import { LuLockKeyhole } from "react-icons/lu";
+// import { GoArrowUpRight } from "react-icons/go";
 import { Link } from "react-router-dom";
+import { GiSydneyOperaHouse } from "react-icons/gi";
 
 function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const user = true;
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
+  // const user = true;
   return (
-    <nav>
-      <div className="left">
-        <a href="" className="logo">
-          <img src="/logo.jpg" alt="" />
-        </a>
-        <a className="first" href="/">
-          Home
-        </a>
-        <a href="/list">About</a>
-        <a href="/:id">Contact</a>
-        <a href="/profile">Agents</a>
-      </div>
-      <div className="right">
-        {user ? (
-          <div className="user">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC3SDs_X1Hu7wtIHG-f_F6fq932zHgCsGbNw&s" alt="" />
-            <span>Chukwuma Eze</span>
-            <Link  className="profile" to="/profile">
-            <div className="notification">3</div>
-            <span>Profile</span>
+    <div>
+    <div className={`navbar ${scrolled ? "scrolled" : ""}`}>
+      <div className="holdnav">
+        <div className="left">
+          <div className="logo">
+            <Link to="/" className="link">
+              {" "}
+              <GiSydneyOperaHouse /> CheckBest
             </Link>
           </div>
-        ) : (
-          <>
-            {" "}
-            <a href="/">Sign in</a>
-            <a href="/" className="register">
-              Sign up
-            </a>
-          </>
-        )}
-        <div className="menuIcon">
-          <img
-            src="/menu.png"
-            alt=""
-            onClick={() => setOpen((prev) => !prev)}
-          />
+
+          <div className="ul-link">
+            <li>
+              <a href="">Buy</a>
+            </li>
+            <li>
+              <a href="">Rent</a>
+            </li>
+            <li>
+              <a href="">New Project</a>
+            </li>
+            <li>
+              <a href="">Shortlet</a>
+            </li>
+            <li>
+              <a href="">Services</a>
+            </li>
+            <li>
+              <a href="">Agent</a>
+            </li>
+            <li>
+              <a href="">Area Guide</a>
+            </li>
+            <li>
+              <a href="/interest">Interest Form</a>
+            </li>
+            <li>
+              <a href="">Blogs</a>
+            </li>
+
+            {/* <hr /> */}
+          </div>
         </div>
-        <div className={open ? "menu active" : "menu"}>
-          <a href="/">Home</a>
-          <a href="/list">About</a>
-          <a href="/:id">Contact</a>
-          <a href="/profile">Agents</a>
-          <a href="/">Sign in</a>
-          <a href="/">Sign up</a>
+        <div className="nav_btn">
+          <Link to="">
+            <button className="btn_one">My Profile</button>
+          </Link>
+          <Link to="/login">
+            <button className="btn_two">Log in</button>
+          </Link>
+          {/* <a href=""><button className='btn_two'>Add Listing <GoArrowUpRight /></button></a> */}
         </div>
       </div>
-    </nav>
+    
+    </div>
+  </div>
   );
 }
 

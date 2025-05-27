@@ -1,0 +1,39 @@
+// @import "../../reponsive.scss"; 
+
+.main {
+  // width: 95% !important;
+  // margin: auto;
+  // padding: 20px;
+    display: flex;
+    flex-direction: column;
+    // height: 100vh;
+    margin: auto;
+    // background-color: red;
+    // padding-top: 91px;
+    background-color: #2a3447;
+
+    // padding: 20px;
+    // overflow-y: scroll;
+  }
+  
+  .con {
+    display: flex;
+    padding: 0% !important;
+    height: 100vh;
+    // background-color: red;
+  } 
+  
+  .menuContainer {
+    width: 300px;
+    // position: fixed;
+  }
+
+  .contentContainer {
+    flex: 3;
+    padding: 20px;
+    padding-bottom: 70px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    background-color: #fff;
+  }
+  

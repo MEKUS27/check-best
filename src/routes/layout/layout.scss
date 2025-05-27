@@ -1,15 +1,14 @@
 @import "../../reponsive.scss"; 
 
+html, body, #root {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+  }
 .layout {
-    height: 100vh;
-    max-width: 1190px;
-
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-
+   
     @include lg{
         // max-width: 1170px;
         // background-color: rgb(247, 210, 196);
@@ -29,7 +28,7 @@
     .content {
         // flex: 1;
         // background-color: red;
-        height: calc(100vh - 100px);
+        // height: calc(100vh - 100px);
     }
    
 }

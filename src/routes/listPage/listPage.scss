@@ -3,32 +3,73 @@
 .listPage {
     display: flex;
     height: 100%;
+    // background-color: red;
     
     @include md {
         flex-direction: column;
         padding-bottom: 1000px;
-        overflow: scroll;
+        // overflow: scroll;
         height:max-content;
       }
 
     .listContainer{
-        flex: 3;
+        // flex: 3;
+        width: 100%;
         height: 100%;
         padding-top: 20px;
+        display: flex;
+        padding: 30px;
+        // background-color: red;
+    padding-top: 100px;
 
-        .wrapper {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-            overflow-y: scroll;
-            overflow-x: hidden;
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+      
+      .pagination {
+        margin-top: 20px;
+        position: fixed;
+        top: 12%;
+        right: 10%;
+        z-index: 10;
+      
+        .page-item {
+          .page-link {
+            background-color: #c31162;
+            font-weight: 700;
+            margin-left: 3px;
+            color: white;
+            border: none;
+            transition: all 0.3s ease;
+      
+            &:hover {
+              background-color: #a10e4f;
+            }
+      
+            &:focus {
+              box-shadow: none;
+              outline: none;
+              background-color: #c31162; // ensure same bg on focus
+              color: white;
+            }
+          }
+      
+          &.active .page-link {
+            background-color: #ff4081;
+            color: #fff;
+          }
         }
+      }
+      
+      
     }
-    .mapContainer{
-        flex: 2;
-        height: 100%;
-        background-color: #fcf5f3;
+    // .mapContainer{
+    //     flex: 2;
+    //     height: 100%;
+    //     background-color: #fcf5f3;
         
-    }
+    // }
 }

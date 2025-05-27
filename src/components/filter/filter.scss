@@ -1,54 +1,54 @@
-.filter {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    h1 {
-        font-weight: 300;
-        font-size: 24px;
+.advanced-filter {
+    max-width: 400px;
+    margin: 0 auto;
+    height: max-content;
+    position: fixed;
+    right: 5%;
+    // box-shadow: 0 2px 12px rgba(0, 0, 0, 0.322);
+    // border: 1px solid grey;
+    border-radius: 3px;
+
+    // margin-top: 50px;
+  
+    .form-label {
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 4px;
     }
-
-    .item {
-        display: flex;
-        flex-direction: column;
-        gap: 2px;
-
-        label {
-            font-size: 10px;
-        } 
-
-        input, select {
-            width: 100px;
-            padding: 10px;
-            border: 1px solid #e0e0e0;
-            border-radius: 5px;
-            font-size: 14px;
-        }
+  
+    .form-control,
+    .form-select {
+      font-size: 0.95rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      transition: border-color 0.2s ease;
+      box-shadow: none;
+  
+      &:focus {
+        border-color: #1a2258;
+        box-shadow: none;
+      }
     }
-
-    .top {
-        input {
-            width: 100%;
-        }
-    }
-
-    .bottom {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-
-
-        button{
-            width: 100px;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-            background-color: #fece51;
-
-            img {
-                width: 25px;
-                height: 25px;
-            }
-        }
+  
+    h5 {
+      font-weight: 600;
+      color: #1a2258;
+      margin-top: 20px;
 
     }
-}
+  
+    button.btn-primary {
+      background-color: #1a2258;
+      border: none;
+      font-weight: 600;
+  
+      &:hover {
+        background-color: #101631;
+      }
+    }
+    svg {
+      margin-top: 20px;
+
+    }
+  }
+  

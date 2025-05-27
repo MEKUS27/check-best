@@ -2,8 +2,22 @@ import { useState, useEffect } from "react";
 import List from "../../components/list/List";
 import "./profilePage.scss";
 import Chat from "../../components/chat/Chat";
+import apiRequest from "../../lib/apiRequest";
+import { useNavigate } from "react-router-dom";
 
 function ProfilePage() {
+
+  const navigate = useNavigate()
+  const handleLogout = async ()=> {
+    try{
+      const res  = apiRequest.post("/auth/logout");
+      localStorage.removeItem("user")
+
+      navigate("/")
+    } catch(err) {
+      console.log(err)
+    }
+  }
 
   useEffect(() => {
     const container = document.querySelector(".details");
@@ -40,7 +54,7 @@ function ProfilePage() {
             </span>
             <span>Username: <b>Chukwuma Eze</b></span>
             <span>E-mail: <b>chukwuma@gmail.com</b></span>
-
+            <button onClick={handleLogout}>Login</button>
           </div>
           <div className="title">
             <h1>List</h1>

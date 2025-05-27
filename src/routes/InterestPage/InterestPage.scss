@@ -1,0 +1,127 @@
+.interest {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  .interestPage {
+    font-family: Arial, sans-serif;
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+    // padding-top: 100px;
+    border: 1px solid #000;
+
+    .logo {
+      h1 {
+        font-size: 30px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        color: #1a2258;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .first-logo {
+        img {
+          width: 195px;
+        }
+      }
+      .secound-logo {
+        h4 {
+          font-size: 18px;
+          font-weight: 500;
+        }
+        display: flex;
+        align-items: center;
+        img {
+          width: 100px;
+        }
+      }
+    }
+
+    form {
+      // padding-top: 5px;
+    }
+
+    .upperheader {
+      text-decoration: underline;
+
+    }
+    h3 {
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      font-weight: 600;
+      color: #1a2258;
+      // font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+    }
+
+
+  }
+  h2 {
+    width: 700px;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+    padding-top: 50px;
+    color: #00AC59;
+    // font-size: 18px;
+  }
+  .row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 10px;
+  }
+  .row label {
+    flex: 1;
+  }
+  .passport {
+    position: absolute;
+    top: 142px;
+    right: 30px;
+    border: 1px solid #000;
+    width: 145px;
+    height: 185px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+  .form-group {
+    margin-bottom: 10px;
+  }
+  input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+  }
+  textarea {
+    width: 100%;
+    height: 40px;
+  }
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .note {
+    font-size: 0.9rem;
+    margin-top: 20px;
+  }
+
+  .declaration {
+    .declara {
+      background-color: #00AC59;
+      width: max-content;
+      color: #fff;
+      padding: 10px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 17px;
+      font-weight: 500;
+    }
+  }
+}
+

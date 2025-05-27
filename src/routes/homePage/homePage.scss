@@ -1,89 +1,131 @@
 @import "../../reponsive.scss";
 
-.homePage {
-  display: flex;
-  height: 100%;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .textContainer {
-    flex: 3;
 
-    .wrapper {
-      width: auto;
-      // padding-right: 100px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 30px;
-      height: 100%;
-      // background-color: red;
 
-      @include lg{
-        padding-right: 50px;
-      }
 
-      @include md{
-        padding: 0;
-      }
+.home_hero {
+  width: 100%;
+  background-color: #FFF8F4;
+  padding-top: 30px;
+  padding-bottom: 0px;
+  margin: 0 auto;
+  margin-top: 41px;
+}
 
-      @include sm{
-        justify-content: flex-start;
-      }
 
-      .title {
-        font-size: 64px;
+.hero_holder {
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 30px;
 
-        @include lg {
-          font-size: 45px;
-        }
-      }
+  animation: backgroundCycle 20s infinite;
+  position: relative;
+}
 
-      .boxes {
-        display: flex;
-        justify-content: space-between;
-
-        @include sm {
-          display: none;
-        }
-
-        @include md {
-          padding-right: 20px;
-        }
-
-        h1 {
-          font-size: 36px;
-
-          @include lg {
-            font-size: 32px;
-          }
-        }
-
-        h2 {
-          font-size: 20px;
-          font-weight: 300;
-        }
-      }
-    }
+@keyframes backgroundCycle {
+  0% {
+    background-image: linear-gradient(to  right, #1a2258bd 30%, transparent), url('/images/bg.jpg');
   }
-
-  .imgContainer {
-    flex: 2;
-    background-color: #fcf5f3;
-    position: relative;
-    display: flex;
-    align-items: center;
-
-    @include md {
-      display: none;
-    }
-
-    img {
-      // width: 115%;
-      position: absolute;
-      right: 0;
-
-      @include lg {
-        width: 105%;
-      }
-    }
+  16.66% {
+    background-image: linear-gradient(to right, #1a2258bd 30%, transparent), url('/images/bg8.jpg');
   }
+  33.33% {
+    background-image: linear-gradient(to right, #1a2258bd 30%, transparent), url('/images/bg13.jpg');
+  }
+  50% {
+    background-image: linear-gradient(to right, #1a2258bd 30%, transparent), url('/images/bg14.jpg');
+  }
+  66.66% {
+    background-image: linear-gradient(to right, #1a2258bd 30%, transparent), url('/images/bg4.jpg');
+  }
+  83.33% {
+    background-image: linear-gradient(to right, #1a2258bd 30%, transparent), url('/images/bg5.jpg');
+  }
+  100% {
+    background-image: linear-gradient(to right, #1a2258bd 30%, transparent), url('/images/bg.jpg');
+  }
+}
+
+
+
+
+.hero_holder .heading {
+  width: 1000px;
+  margin: auto;
+}
+.hero_holder .heading h1 {
+  font-weight: 800;
+    color: white;
+  font-size: 3.0rem;
+  padding-top: 50px;
+}
+
+.hero_holder .heading p {
+  font-size: 24px;
+  color: #fff;
+  padding-top: 35px;
+}
+
+.typewriter {
+  font-weight: bold;
+  /* color: #ff6725; */
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 2s infinite;
+  /* color: #ff6725; */
+}
+
+.typewriter-wrapper {
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 800;
+  font-size: 4.5rem;
+  font-family: 'Raleway', sans-serif; /* or your font */
+}
+
+.hidden-word {
+  visibility: hidden;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.visible-word {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+}
+
+
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.homecard {
+ padding-left: 25px;
+ display: flex;
+
+ .chat {
+  position: fixed;
+  top: 30%;
+  right: 3%;
+ }
 }

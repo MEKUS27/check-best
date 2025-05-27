@@ -1,102 +1,139 @@
 @import "../../reponsive.scss";
 
-.searchBar {
-  .type {
+.search-container {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  padding: 0 20px;
+  background-image: url('/images/shape_02.svg');
+  background-size: cover;
+  padding: 20px;
+}
 
-   
+.search-form {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  background: #fff;
+    border-radius: 15px;
+    border: 1px solid #ededed;
+    box-shadow: 0px 30px 70px rgba(0, 0, 0, .04);
+    padding: 30px 20px;
+}
 
-    button {
-      padding: 16px 36px;
-      border: 1px solid #999;
-      background-color: white;
-      color: black;
-      cursor: pointer;
-      text-transform: capitalize;
-      // border-top-left-radius: 4px;
-      // border-top-left-radius: 4px;
 
-      &.active {
-        background-color: black;
-        color: white;
-      }
 
-      &:first-child {
-        border-top-left-radius: 5px;
-        border-right: none;
-      }
+.form-group {
+  position: relative;
+  flex: 1 1 100px;
+  display: flex;
+  flex-direction: column;
+}
 
-     
+.form-group::placeholder {
+  font-size: 10px;
+}
 
-      &:last-child {
-        border-top-right-radius: 5px;
-        border-left: none;
-      }
-    }
-  }
+label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
 
-  form {
-    border: 1px solid #999;
-    display: flex;
-    justify-content: space-between;
-    height: 64px;
-    gap: 5px;
+.form-control {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
 
-    @include sm {
-      flex-direction: column;
-      border: none;
-    }
+.form-control:focus {
+  outline: none;
+  border-color: #1a2258;
+}
 
-    
+.custom-select {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  /* font-size: 1rem; */
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color 0.3s;
+}
 
-    input {
-      border: none;
-      padding: 0px 10px;
-      width: 200px;
-      outline: none;
+.custom-select:focus {
+  outline: none;
+  border-color: #1a2258;
+}
 
-      @include lg {
-        padding: 0px 5px;
+.arrow {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
 
-        &:nth-child(2),
-        &:nth-child(3) {
-          width: 140px;
-        }
-      }
+.arrow.open {
+  transform: rotate(180deg);
+}
 
-      @include md {
-        width: 200px;
-        &:nth-child(2),
-        &:nth-child(3) {
-          width: 200px;
-        }
-      }
+.options-list {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-height: 160px;
+  overflow-y: auto;
+  z-index: 10;
+  animation: fadeIn 0.3s ease forwards;
+}
 
-     
+.options-list li {
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  list-style: none !important;
+  font-size: 13px;
+}
 
-      @include sm{
-        width: auto;
-        &:nth-child(2),
-        &:nth-child(3) {
-          width: auto;
-        }
-        padding: 20px;
-        border: 1px solid #999;
-      }
-      
-    }
+.options-list li:hover {
+  background-color: #f0f0f0;
+}
 
-    button {
-      border: none;
-      cursor: pointer;
-      background-color: #fece51;
-      padding: 20px;
-      flex: 1;
+.options-list li.selected {
+  background-color: #1a2258;
+  color: white;
+  font-weight: 700;
+}
 
-      
+.search-button {
+  padding: 12px 28px;
+  background-color: #1a2258;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-      img {
-        width: 24px;
-      }
-    }
-  }
+.search-button:hover {
+  background-color: #000;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }

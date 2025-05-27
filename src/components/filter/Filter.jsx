@@ -1,57 +1,104 @@
 import "./filter.scss";
+// import { FaFilter } from "react-icons/fa";
+import { LuFilter } from "react-icons/lu";
+
 
 function Filter() {
   return (
-    <div className="filter">
-      <h1>
-        Search resualts for <b>Abia State, Aba</b>
-      </h1>
-      <div className="top">
-        <div className="item">
-          <label htmlFor="city">Location</label>
-          <input type="text" id="city" name="" placeholder="city Location" />
-        </div>
+    <div className="advanced-filter bg-white p-4">
+      <div className="d-flex align-items-center mb-3">
+        <LuFilter className="me-2 text-muted" />
+        <h5 className="mb-0">Advanced Filter Options</h5>
       </div>
-      <div className="bottom">
-        <div className="item">
-          <label htmlFor="type">Type</label>
-        <select name="type" id="type">
-             <option value="">any</option>
-            <option value="buy">Buy</option>
-            <option value="buy">Rent</option>
-        </select>
-         
-        </div>
-        <div className="item">
-          <label htmlFor="property">Shop Type</label>
-         <select name="property" id="property">
-            <option value="">any</option>
-            <option value="RetailShops">Retail Shops</option>
-            <option value="ServiceBasedShops">Service-Based Shops</option>
-            <option value="ProfessionalOffices(Compact Units)">Professional Offices</option>
-            <option value="MultipurposeShops">Multipurpose Shops</option>
-            <option value="PharmaciesorHealth Stores">Pharmacies or Health Stores</option>
-            <option value="Food&Beverage">Food & Beverage</option>
 
-         </select>
+      <form className="row g-3">
+        <div className="col-12">
+          <label className="form-label">Location</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Enter a state, locality or area"
+          />
         </div>
-        <div className="item">
-          <label htmlFor="minPrice">Min Price</label>
-          <input type="number" id="minPrice" name="minPrice" placeholder="any" />
 
+        <div className="col-12">
+          <label className="form-label">Category</label>
+          <select className="form-select">
+            <option>For Sale</option>
+            <option>For Rent</option>
+          </select>
         </div>
-        <div className="item">
-          <label htmlFor="maxPrice">Max Price</label>
-          <input type="text" id="maxPrice" name="maxPrice" placeholder="any" />
+
+        <div className="col-md-6">
+          <label className="form-label">Type</label>
+          <select className="form-select">
+            <option>All Types</option>
+            <option>Mini Shop</option>
+            <option>Warehouse</option>
+            <option>Retail</option>
+            <option>Office</option>
+          </select>
         </div>
-        <div className="item">
-          <label htmlFor="unit">Shop Unit</label>
-          <input type="text" id="unit" name="unit" placeholder="any" />
+
+        <div className="col-md-6">
+          <label className="form-label">Shop Sizes</label>
+          <select className="form-select">
+            <option>Any Size</option>
+            <option>861 sqft</option>
+            <option>761 sqft</option>
+            <option>661 sqft</option>
+            <option>561 sqft</option>
+            <option>461 sqft</option>
+          </select>
         </div>
-        <button>
-          <img src="/search.png" alt="" />
-        </button>
-      </div>
+
+        <div className="col-md-6">
+          <label className="form-label">Min price</label>
+          <select className="form-select">
+            <option>Any Price</option>
+            <option>₦100,000</option>
+            <option>₦200,000</option>
+            <option>₦300,000</option>
+            <option>₦400,000+</option>
+
+          </select>
+        </div>
+
+        <div className="col-md-6">
+          <label className="form-label">Max price</label>
+          <select className="form-select">
+            <option>Any Price</option>
+            <option>₦500,000</option>
+            <option>₦600,000</option>
+            <option>₦700,000</option>
+            <option>₦800,000+</option>
+
+
+          </select>
+        </div>
+
+        <div className="col-md-6">
+          <label className="form-label">Furnishing</label>
+          <select className="form-select">
+            <option>Any</option>
+            <option>Furnished</option>
+            <option>Unfurnished</option>
+          </select>
+        </div>
+
+        <div className="col-md-6">
+          <label className="form-label">Servicing</label>
+          <select className="form-select">
+            <option>Any</option>
+            <option>Serviced</option>
+            <option>Not Serviced</option>
+          </select>
+        </div>
+
+        <div className="col-12">
+          <button className="btn btn-primary w-100 mt-2">Search</button>
+        </div>
+      </form>
     </div>
   );
 }

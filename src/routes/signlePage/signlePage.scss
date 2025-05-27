@@ -1,8 +1,65 @@
 @import "../../reponsive.scss";
 
+.upper_detail {
+  padding: 0px 30px;
+  padding-top: 110px;
+
+  .holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left {
+      ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        color: #9a9eb5;
+        gap: 7px;
+        padding: 0px;
+        margin: 0;
+
+        li {
+          font-size: 14px;
+          text-shadow: none;
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        svg {
+          width: 14px;
+          height: 14px;
+          // font-weight: 900;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      gap: 30px;
+      position: fixed;
+      right: 4%;
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        display: inline-flex;
+        font-weight: 600;
+        color: #1a2258;
+        font-size: 14px;
+      }
+    }
+  }
+
+
+}
+
 .signlePage {
   display: flex;
   height: 100%;
+  padding: 0px 30px;
+  // padding-top: 90px;
 
   @include md {
     flex-direction: column;
@@ -11,42 +68,49 @@
 
   @include sm {
     scrollbar-width: none;
-
-    }
-  
- 
-
-  
+  }
 
   .details {
-    flex: 3;
+    flex: 4;
     overflow-y: scroll;
-  scrollbar-width: thin; 
-  padding-top: 30px;
+    scrollbar-width: thin;
+    padding-top: 20px;
     padding-bottom: 30px;
 
-    
-
     .wrapper {
-      padding-right: 50px;
+      padding-right: 20px;
 
       @include md {
-      padding-right: 10px;
+        padding-right: 10px;
       }
 
       @include sm {
         padding-right: 0px;
-        }
+      }
+
+      h1 {
+        font-size: 26px;
+        font-weight: 700;
+        color: #1a2258;
+        margin-top: 15px;
+        margin-bottom: 0px;
+        // padding: 0px;
+        font-family: "Segoe UI", sans-serif;
+      }
 
       .info {
-        margin-top: 50px;
+        margin-top: 20px;
         .top {
           display: flex;
           justify-content: space-between;
+          border-bottom: 1px solid #eaebf0;  
+          padding-bottom: 10px;
+
           .post {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            
+            // gap: 20px;
             h1 {
               font-weight: 400;
             }
@@ -63,175 +127,103 @@
             }
             .price {
               padding: 5px;
-              background-color: rgba(254, 205, 81, 0.438);
+              // background-color: rgba(254, 205, 81, 0.438);
               border-radius: 5px;
-              width: max-content;
-              font-size: 20px;
-              font-weight: 300;
-            }
-          }
+              // width: max-content;
+              font-size: 30px;
+              font-weight: 400;
+             font-family: "Segoe UI", sans-serif;
 
-          .user {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            padding: 0px 50px;
-            border-radius: 10px;
-            background-color: rgba(254, 205, 81, 0.209);
-            font-weight: 600;
-
-            img {
-              width: 50px;
-              height: 50px;
-              border-radius: 50%;
-              object-fit: cover;
             }
           }
         }
         .bottom {
-            margin-top: 50px;
-            color: #555;
-            line-height: 20px;
+          margin-top: 20px;
+          color: #555;
+          line-height: 20px;
+          display: flex;
+          // align-items: center;
+          justify-content: space-between;
+
+          .mapContainer {
+            width: 500px;
+            height:auto;
+            // background-color: red;
+        
+            // @include md{
+            //   display: none;
+            // }
+          }
+
+          h3 {
+            padding: 5px;
+            background-color: rgba(254, 205, 81, 0.438);
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 18px;
+            max-width: max-content;
+            // color: #1a2258;
+          }
+
+          ul {
+            padding-left: 0px;
+
+            li {
+            list-style:circle;
+              margin-bottom: 15px;
+              font-weight: 500;
+            }
+
+           
+          
+
+          }
+          
         }
       }
     }
   }
+
+  
 
   .details {
     overflow-y: scroll;
     scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scroll-behavior: smooth; 
-
-    
-  @include md {
-    flex: none;
-    height: max-content;
-    margin-bottom: 50px;
-  }
-  
-  }
-
-  
-  
-  .features {
-    flex: 2;
-    background-color: #fcf5f3;
-    height: 100%;
-    // overflow-y: scroll;
-    overflow-y: scroll;
-    scrollbar-width: thin; 
-    padding-bottom: 30px;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scroll-behavior: smooth;
 
     @include md {
-        flex: none;
-        height: max-content;
-        margin-bottom: 50px;
-      }
+      flex: none;
+      height: max-content;
+      margin-bottom: 50px;
+    }
+    .title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-family: "Segoe UI", sans-serif;
+    }
 
-    .wrapper {
-      padding: 0px 20px;
+    .feature {
       display: flex;
-      flex-direction: column;
-      gap: 20px;
-
-      img {
-        width: 24px;
-      }
-
-      .title {
-        font-weight: bold;
-        font-size: 18px;
-        margin-bottom: 10px;
-      }
-
-      .feature {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-
-        img {
-            background-color: rgba(254, 205, 81, 0.209);
-            // width: 18px;
-        }
-
-        .featureText {
-            span {
-                font-weight: 900;
-                font-size: 14px;
-            }
-
-            p {
-                font-size: 14px;
-            }
-        }
-
-      }
-
-      .listVerticel {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px 10px;
-        background-color: white;
-        border-radius: 10px;
-      }
-
-      .listHorizontal {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px 10px;
-        background-color: white;
-        border-radius: 10px;
-      }
-
-      .sizes {
-        display: flex;
-        justify-content: space-between;
-
-        @include lg{
-            font-size: 12px;
-        }
-
-        .size {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background-color: white;
-            padding: 10px;
-            border-radius: 5px;
-        }
-      }
-
-      .mapContainer {
-        width: 100%;
-        height: 200px;
-      }
-
-      .buttons{
-        display: flex;
-        justify-content: space-between;
-
-        button{
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            background-color: white;
-            border: 1px solid #fece51;
-            border-radius: 5px;
-            cursor: pointer;
-
-            img {
-                width: 16px;
-            }
-        }
-      }
-
+      align-items: center;
+      gap: 10px;
     }
   }
 
+  .features {
+    flex: 2;
+    background-color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 
+  .rent {
+    background-color: #1a2258;
+    border: none;
+    padding: 10px 50px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 500;
+  }
 }

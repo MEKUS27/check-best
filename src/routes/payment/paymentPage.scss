@@ -1,0 +1,112 @@
+.paystack-payment {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.075);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 150px;
+  }
+  
+  .paystack-payment h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 22px;
+    color: #2d2d2d;
+  }
+  
+  .paystack-methods {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .method-box {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .method-box input {
+    accent-color: #1a1a1a;
+  }
+  
+  .method-box label {
+    font-weight: 500;
+    font-size: 15px;
+    color: #333;
+  }
+  
+  .method-box.active {
+    border-color: #1a2258;
+    box-shadow: 0 0 0 3px rgba(10, 165, 255, 0.1);
+  }
+  
+  .paystack-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .paystack-form input {
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.2s;
+  }
+  
+  .paystack-form input:focus {
+    border-color: #1a2258;
+    outline: none;
+  }
+  
+  .two-columns {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .paystack-btn {
+    padding: 14px;
+    background-color: #1a2258;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .paystack-btn:hover {
+    background-color: #1a2258;
+  }
+
+  .bank-info-box {
+    background-color: #f9f9f9;
+    border-left: 4px solid #1a2258;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 15px;
+  
+    p {
+      margin: 5px 0;
+    }
+  
+    .note {
+      margin-top: 10px;
+      font-style: italic;
+      color: #555;
+    }
+  }
+  
+  
