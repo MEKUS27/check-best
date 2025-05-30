@@ -3,6 +3,7 @@ import { SlLocationPin } from "react-icons/sl";
 import { LuConstruction } from "react-icons/lu";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { FaBuildingShield } from "react-icons/fa6";
+import GoogleAd from '../../components/GoogleAd/GoogleAd';
 
 
 
@@ -10,6 +11,7 @@ import { FaBuildingShield } from "react-icons/fa6";
 function Aboutus() {
   return (
     <div className="aboutus">
+        <GoogleAd />
         <div className="image">
         <img src="/images/bg3.jpg" className="d-block w-100" alt="Shop construction" />
         </div>
