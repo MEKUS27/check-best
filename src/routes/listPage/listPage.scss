@@ -24,8 +24,11 @@
 
 
     .wrapper {
-        display: flex;
-        flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      // overflow-y: scroll;
+        // display: flex;
+        // flex-wrap: wrap;
         gap: 30px;
       }
       

@@ -1,0 +1,27 @@
+.shop {
+    // padding: 50px;
+    padding-top: 100px;
+
+    // background-color: red;
+
+    .homecard {
+        //  padding-left: 25px;
+         display: flex;
+        padding-left: 20px;
+        
+        
+        .Hlink {
+          width: auto;
+          // display: flex;
+          // flex-wrap: wrap;
+          // justify-content: center;
+          display: grid; grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 20px;
+          // justify-content: space-between;
+          gap: 10px;
+          margin-top: 30px;
+          // background-color: red;
+          // padding-left: 20px;
+        }
+        }
+}

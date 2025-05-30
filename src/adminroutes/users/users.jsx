@@ -44,12 +44,12 @@ const columns = [
     width: 200,
     type: "string",
   },
-  {
-    field: "verified",
-    headerName: "Verified",
-    width: 150,
-    type: "boolean",
-  },
+  // {
+  //   field: "verified",
+  //   headerName: "Verified",
+  //   width: 150,
+  //   type: "boolean",
+  // },
 ];
 
 const Users = () => {
@@ -66,15 +66,15 @@ const Users = () => {
   return (
     <div className="users">
       <div className="info">
-        <h1>Users</h1>
-        <button onClick={() => setOpen(true)}>Add New User</button>
+        <h1>Registered users</h1>
+        {/* <button onClick={() => setOpen(true)}>Add New User</button> */}
       </div>
 
       {/* Use either static userRows or fetched data */}
       {/* Uncomment below to use API data */}
       {/* {isLoading ? "Loading..." : <DataTable slug="users" columns={columns} rows={data} />} */}
       
-      <DataTable slug="users" columns={columns} rows={userRows} />
+      <DataTable className="data" slug="users" columns={columns} rows={userRows} />
 
       {open && <Add slug="user" columns={columns} setOpen={setOpen} />}
     </div>

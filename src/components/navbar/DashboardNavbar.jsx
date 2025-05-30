@@ -5,7 +5,8 @@ const Navbar = () => {
     <div className="adminnavbar">
       <div className="logo">
         {/* <img src="/logo.svg" alt="Lamadmin Logo" /> */}
-        <span>CheckBest adminDashboard</span>
+        <img src="/logo.jpg" alt="" />
+        <span>adminDashboard</span>
       </div>
       <div className="icons">
         <img src="/search.svg" alt="Search" className="icon" />

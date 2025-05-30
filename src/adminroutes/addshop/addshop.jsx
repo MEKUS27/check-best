@@ -76,7 +76,7 @@ function Addshop() {
 
                 <div className="col-md-6">
                   <label htmlFor="businessType" className="form-label">
-                    Shop Type
+                    Business Type
                   </label>
                   <select
                     className="form-select"
@@ -188,7 +188,7 @@ function Addshop() {
 
               <div className="mt-4 text-end">
                 <button type="submit" className="btn btn-success">
-                  Add Shop
+                  Submit Shop
                 </button>
               </div>
             </form>

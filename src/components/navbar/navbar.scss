@@ -32,12 +32,23 @@
     /* border-bottom: 1px solid #1a225833; */
   
   }
+
+  .navbar .holdnav .left {
+    display: flex;
+    justify-content: space-between;
+    // background-color: red;
+    width: 60%;
+  }
   
   .navbar .logo {
     width: auto;
     display: flex;
     align-items: center;
     /* background-color: red; */
+  }
+
+  .navbar .logo img {
+    width: 135px;
   }
   
   .navbar .left {
@@ -59,7 +70,7 @@
     font-size: 18px;
     font-weight: 800;
     text-decoration: none;
-    color: #1a2258;
+    color: #0DAE64;
     gap: 5px;
   }
   
@@ -76,7 +87,7 @@
   
   .navbar .ul-link li a {
     font-weight: 600;
-    color: #1a2258;
+    color: #0DAE64;
     padding: 6px 12px;
     border-radius: 4px;
     font-size: 14px;
@@ -103,13 +114,13 @@
       border-radius: 4px;
       font-size: 14px;
       height: 33px;
-      background: #1a2258;
+      background: #0DAE64;
       border: none;
   }
   
   .nav_btn  .btn_two {
     font-weight: 600;
-      color: #1a2258;
+      color: #0DAE64;
       padding: 6px 12px;
       border-radius: 4px;
       font-size: 14px;

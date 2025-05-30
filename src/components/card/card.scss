@@ -3,29 +3,36 @@
 
 
 .property-card {
-    width: 840px;
-    display: flex;
+    width: auto;
+    // display: flex;
     gap: 20px;
     background: white;
     padding: 15px;
-    border-radius: 15px;
-    // border: 1px solid grey;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.171);
-    flex-wrap: wrap;
-    margin-bottom: 7px;
+    // margin: 0;
+    // padding-bottom: 30px;
+    border-radius: 10px;
+    border: 1px solid #0DAE64;
+    // box-shadow: 0 2px 12px rgba(0, 0, 0, 0.171);
+    // flex-wrap: wrap;
+    // margin-bottom: 20px;
     font-family: "Raleway", sans-serif;
 
   
     .image-section {
-        // flex: 3;
+
+      .img_link {
+        width:350px;
         position: relative;
         display: flex;
         flex-direction: column;
-        gap:7px;
+        margin-bottom: 5px;
+        // gap:7px;
+      } 
+      
 
       
         .main-image {
-          width: 80%;
+          // width: 80%;
           height: 250px;
           object-fit: cover;
           border-radius: 5px;
@@ -46,7 +53,7 @@
         }
       
         .thumbnail {
-            width: 120px;
+            width: 116px;
             height: 60px;
             object-fit: cover;
             border-radius: 4px;
@@ -74,11 +81,11 @@
       flex-direction: column;
     //   gap: 10px;
     // background-color: red;
-    margin-left: -90px;
+    // margin-left: -90px;
   
       .header {
-        display: flex;
-        justify-content: space-between;
+        // display: flex;
+        // justify-content: space-between;
         // align-items: center;
         gap: 20px;
     // border: 1px solid grey;
@@ -92,7 +99,7 @@
             font-weight: 700;
             font-family: "Raleway", sans-serif;
 
-          color: #1a2258;
+          color: #0DAE64;
           margin-bottom: 0px;
           padding-right: 10px;
   
@@ -132,7 +139,7 @@
         
 
         .right {
-            width: max-content;
+            width:100%;
           border-left: 1px solid #d9d9d9;
           padding-left: 10px;
           position: relative;
@@ -142,7 +149,7 @@
                 font-size: 17px;
                 font-weight: 600;
               font-weight: bold;
-              color: #1a2258;
+              color: #0DAE64;
               margin-bottom: 0px !important;
             //   margin-top: -27px;
             }
@@ -150,22 +157,23 @@
             p {
                 font-weight: 500;
                 color: #807d7d;
-                font-size: 10px;
+                font-size: 12px;
             }
 
             .heart {
                 svg {
                     position: absolute;
                     top: 20%;
-                    right: -40%;
+                    right: 0%;
                     width: 20px;
                     height: 20px;
                     cursor: pointer;
+                    color: #0DAE64;
                 }
             }
 
             .sponsored-badge {
-                border: 1px solid #c31162;
+                border: 1px solid #0DAE64;
                 border-radius: 5px;
                 color: #c31162;
                 font-weight: 600;
@@ -190,7 +198,7 @@
             list-style: none;
             padding-left: 0px;
             gap: 10px;
-            padding-top: 20px;
+            padding-top: 5px;
 
             li {
                 color: #1a2258;
@@ -268,51 +276,52 @@
         }
       }
   
-      .actions {
-        display: flex;
-        gap: 10px;
-        // position: relative;
+      // .actions {
+      //   display: flex;
+      //   gap: 10px;
+      //   // position: relative;
   
-        .btn {
-        //   padding: 8px 12px;
-          border-radius: 5px;
-        //   font-size: 17px;
-          border: none;
-          display: flex;
-          align-items: center;
-          gap: 5px;
-          cursor: pointer;
-          position: relative;
+      //   .btn {
+      //   //   padding: 8px 12px;
+      //     border-radius: 5px;
+      //   //   font-size: 17px;
+      //     border: none;
+      //     display: flex;
+      //     align-items: center;
+      //     gap: 5px;
+      //     cursor: pointer;
+      //     position: relative;
   
-          &.call {
-            background: #0066cc;
-            color: white;
-            position: absolute;
-              top: 156%;
-              font-size: 10px;
-              gap: 5px;
+      //     &.call {
+      //       background: #0066cc;
+      //       color: white;
+      //       position: absolute;
+      //         top: 156%;
+      //         font-size: 10px;
+      //         gap: 5px;
 
-          }
+      //     }
   
-          &.whatsapp {
-            background: #25d366;
-            color: white;
-            position: absolute;
-            top: 152%;
-            right: -20%;
-          }
+      //     &.whatsapp {
+      //       border: 1px solid #25d366;
+      //       background-color: white;
+      //       color: #25d366 !important;
+      //       position: absolute;
+      //       top: 62%;
+      //       right: 20%;
+      //     }
 
-          svg {
-            width: 18px;
-            height: 18px;
-          }
-        }
+      //     svg {
+      //       width: 18px;
+      //       height: 18px;
+      //     }
+      //   }
 
-        a {
-            color: #fff;
-            text-decoration: none;
-        }
-      }
+      //   a {
+      //       color: #fff;
+      //       text-decoration: none;
+      //   }
+      // }
     }
   }
   

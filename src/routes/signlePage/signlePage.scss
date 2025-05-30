@@ -46,7 +46,7 @@
         gap: 10px;
         display: inline-flex;
         font-weight: 600;
-        color: #1a2258;
+        color: #0DAE64;
         font-size: 14px;
       }
     }
@@ -59,6 +59,8 @@
   display: flex;
   height: 100%;
   padding: 0px 30px;
+  // background-color: #fffaf5;
+  // margin: auto;
   // padding-top: 90px;
 
   @include md {
@@ -71,14 +73,38 @@
   }
 
   .details {
-    flex: 4;
-    overflow-y: scroll;
-    scrollbar-width: thin;
+    flex: 5;
+    // width: 70%;
+    // margin: auto;
+    // margin: auto;
+    // overflow-y: scroll;
+    // scrollbar-width: thin;
     padding-top: 20px;
     padding-bottom: 30px;
+    // background-color: red;
 
     .wrapper {
       padding-right: 20px;
+      // background-color: red;
+      // border: 1px solid #9a9eb5;
+      // margin: auto;
+
+      // .DF {
+      //   display: flex;
+        
+      //   .avaliable {
+      //     width: 1000px;
+      //     height: 40px;
+      //     padding: 20px;
+      //     background-color: red;
+      //     margin-top: 30px;
+
+      //   }
+      // }
+
+      .slide {
+        width: 100px;
+      }
 
       @include md {
         padding-right: 10px;
@@ -91,8 +117,8 @@
       h1 {
         font-size: 26px;
         font-weight: 700;
-        color: #1a2258;
-        margin-top: 15px;
+        // color: #1a2258;
+        // margin-top: 15px;
         margin-bottom: 0px;
         // padding: 0px;
         font-family: "Segoe UI", sans-serif;
@@ -100,10 +126,11 @@
 
       .info {
         margin-top: 20px;
+        // display: flex;
         .top {
           display: flex;
           justify-content: space-between;
-          border-bottom: 1px solid #eaebf0;  
+          // border-bottom: 1px solid #eaebf0;  
           padding-bottom: 10px;
 
           .post {
@@ -131,53 +158,101 @@
               border-radius: 5px;
               // width: max-content;
               font-size: 30px;
-              font-weight: 400;
-             font-family: "Segoe UI", sans-serif;
+              font-weight: 700;
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             color: #EC3237;
 
+            }
+            .description_head {
+              width: max-content;
+              color: #0DAE64;
+              padding: 5px;
+              background-color: rgba(254, 205, 81, 0.438);
+              font-weight: 700;
+              font-size: 17px;
+              margin: 0;
+              padding-bottom: 10px;
+              margin-top: 10px;
+            }
+            .description_detail {
+              width: auto;
+              display: flex;
+              gap: 5px;
+              align-items: center;
+              color: #fff;
+              padding: 10px;
+              font-size: 16px;
+              background-color: #0DAE64;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+              border-bottom-left-radius: 10px;
+              margin-top: 10px;
             }
           }
         }
         .bottom {
           margin-top: 20px;
-          color: #555;
+          // color: #555;
           line-height: 20px;
           display: flex;
           // align-items: center;
           justify-content: space-between;
 
           .mapContainer {
-            width: 500px;
+            width: 400px;
             height:auto;
-            // background-color: red;
-        
-            // @include md{
-            //   display: none;
-            // }
-          }
-
-          h3 {
-            padding: 5px;
-            background-color: rgba(254, 205, 81, 0.438);
-            font-size: 24px;
-            font-weight: 500;
-            margin-bottom: 18px;
-            max-width: max-content;
-            // color: #1a2258;
-          }
-
-          ul {
-            padding-left: 0px;
-
-            li {
-            list-style:circle;
-              margin-bottom: 15px;
-              font-weight: 500;
-            }
-
+            // display: none;
            
-          
-
           }
+
+          .shopdetails {
+            // border: 1px solid #0DAE64;
+            border-radius: 3px;
+            // padding: 20px;
+
+
+            h3 {
+              padding: 5px;
+              color: #0DAE64;
+              background-color: rgba(254, 205, 81, 0.438);
+              font-size: 20px;
+              font-weight: 500;
+              margin-bottom: 18px;
+              max-width: max-content;
+              // color: #1a2258;
+            }
+  
+            ul {
+              padding-left: 0px;
+  
+              li {
+                width: max-content;
+              // list-style:disc;
+              color: #888;
+              // background-color: #0DAE64;
+              // border: 1px solid #d9d9d9ab;
+              font-weight: 600;
+              font-size: 13px;
+              display: inline-block;
+              display: flex;
+              align-items: center;
+              padding: 5px 8px;
+              border-radius: 4px;
+              margin-right: 1px;
+              position: relative;
+              text-transform: uppercase;
+              margin-bottom: 10px;    
+              gap: 2px;
+                // list-style: none;
+              }
+  
+             
+            
+  
+            }
+          }
+
+         
           
         }
       }
@@ -216,6 +291,67 @@
     background-color: #fff;
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+
+  .avaliable {
+    width: max-content;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    position: fixed;
+
+    h1 {
+      font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    color: #EC3237;
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    }
+
+    .first_p {
+      color: #888;
+    font-size: 14px;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+    border-bottom: 1px solid #d9d9d9;
+    }
+
+    .avlist-header  {
+      display: flex;
+      justify-content: space-between;
+    border-bottom: 1px solid #d9d9d9;
+
+      
+      h2 {
+        font-size:14px;
+        font-weight: 600;
+        color: #0DAE64;
+      }
+    }
+
+    .list {
+      color: #888;
+    // justify-content: space-between;
+    font-size: 13px;
+    padding: 0px 0;
+    padding-top: 10px;
+    border-bottom: 1px solid #d9d9d9;
+    font-family: "Segoe UI", sans-serif;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      padding: 0px;
+      margin: 0;
+      padding-bottom: 8px;
+    }
+
+    }
   }
 
   .rent {

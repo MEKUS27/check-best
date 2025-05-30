@@ -106,7 +106,7 @@ function Register() {
                   Country Code
                 </label>
                 <select className="form-select country-select" id="countryCode">
-                  <option value="+1">🇺🇸 United States (+1)</option>
+                  <option value="+1">🇺🇸 USA (+1)</option>
                   <option value="+44">🇬🇧 UK (+44)</option>
                   <option value="+91">🇮🇳 India (+91)</option>
                   <option value="+234">🇳🇬 Nigeria (+234)</option>

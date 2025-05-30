@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.scss";
-// import { assets } from "../assets/assets";
-// import { LuLockKeyhole } from "react-icons/lu";
-// import { GoArrowUpRight } from "react-icons/go";
 import { Link } from "react-router-dom";
 import { GiSydneyOperaHouse } from "react-icons/gi";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const { currentUser } = useContext(AuthContext);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,21 +27,22 @@ function Navbar() {
           <div className="logo">
             <Link to="/" className="link">
               {" "}
-              <GiSydneyOperaHouse /> CheckBest
+              {/* <GiSydneyOperaHouse /> CheckBest */}
+              <img src="/logo.jpg" alt="" />
             </Link>
           </div>
 
           <div className="ul-link">
             <li>
-              <a href="">Buy</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="">Rent</a>
+              <a href="/aboutus">About Us</a>
             </li>
             <li>
-              <a href="">New Project</a>
+              <a href="/list">Shops</a>
             </li>
-            <li>
+            {/* <li>
               <a href="">Shortlet</a>
             </li>
             <li>
@@ -52,12 +53,12 @@ function Navbar() {
             </li>
             <li>
               <a href="">Area Guide</a>
-            </li>
+            </li> */}
             <li>
               <a href="/interest">Interest Form</a>
             </li>
             <li>
-              <a href="">Blogs</a>
+              <a href="">Contact Admin</a>
             </li>
 
             {/* <hr /> */}

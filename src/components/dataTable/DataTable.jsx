@@ -1,6 +1,6 @@
 import React from "react";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./dataTable.scss";
 
 const DataTable = ({ columns, rows, slug }) => {
@@ -11,18 +11,18 @@ const DataTable = ({ columns, rows, slug }) => {
   const actionColumn = {
     field: "action",
     headerName: "Action",
-    width: 200,
+    width: 70,
     renderCell: (params) => (
       <div className="action">
-        <Link to={`/${slug}/${params.row.id}`}>
+        {/* <Link to={`/${slug}/${params.row.id}`}>
           <img src="/view.svg" alt="View" />
-        </Link>
+        </Link> */}
         <button
           className="delete"
           onClick={() => handleDelete(params.row.id)}
           aria-label={`Delete ${slug} with id ${params.row.id}`}
         >
-          <img src="/delete.svg" alt="Delete" />
+          <img src="/delete.svg" alt="Delete" /> 
         </button>
       </div>
     ),

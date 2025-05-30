@@ -2,14 +2,26 @@
 @import "../../styles/responsive.scss";
 
 
+.test {
+  position: relative;
+  // background-color: #fff;
+  background-color: red;
+  margin-top: 90px;
 
+
+}
 
 .home {
+  width: 75%;
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(3, 2fr);
   grid-auto-rows: minmax(100px, auto); // Reduced from 180px
   grid-auto-flow: dense;
+  position: fixed;
+  z-index: 30;
+  background-color: #fff;
+
  
   
   // background-color: red;
@@ -32,7 +44,7 @@
 
   .box {
     padding: 12px; // Reduced padding
-    border-radius: 10px;
+    border-radius: 5px;
     border: 2px solid $soft-bg;
   }
 

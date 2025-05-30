@@ -6,6 +6,8 @@ import { AuthContext } from "../../context/AuthContext";
 import Card from "../../components/card/Card";
 import { listData } from "../../lib/dummydata";
 import Chat from "../../components/chat/Chat";
+import Map from "../../components/map/Map";
+import { Link } from "react-router-dom";
 
 const phrases = [
   "Shop",
@@ -62,31 +64,20 @@ function HomePage() {
           <div className="hero_holder">
             <div className="heading">
               <h1>
-                At CheckBest, you’ll find all kinds of Shops from Fashion and
-                Tech to Local Markets — in one easy place.
+                At <span>CheckBest,</span> You’ll Find All <br /> Kinds Of <span>Shops</span>
+                {/* Tech to Local Markets — in one easy place. */}
                 {/* <span className='typewriter-wrapper'>
               <span className="hidden-word">investment</span> 
               <span className="visible-word">{text}</span>
             </span> */}
               </h1>
-              <p>We’ve more than 745,000 shops avaliable for rent</p>
+              {/* <p>We’ve more than 745,000 shops avaliable for rent</p> */}
             </div>
             <SearchBar />
           </div>
         </div>
       </div>
-      <div className="homecard">
-       <div>
-       {/* {data.map((item) => (
-          <Card key={item.id} item={item} />
-        ))} */}
-       </div>
-
-        {/* <div className="chat">
-        <Chat />
-        </div> */}
-       
-      </div>
+     
     </>
   );
 }

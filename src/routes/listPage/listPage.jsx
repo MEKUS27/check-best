@@ -6,7 +6,7 @@ import './listPage.scss';
 
 function ListPage() {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 3;
+  const itemsPerPage = 4;
 
   // Pagination calculations
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -21,7 +21,7 @@ function ListPage() {
   return (
     <div className='listPage'>
       <div className='listContainer'>
-        <div className='wrapper d-flex flex-wrap gap-4'>
+        <div className='wrapper'>
           {currentItems.map((item) => (
             <Card key={item.id} item={item} />
           ))}

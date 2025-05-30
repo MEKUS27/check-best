@@ -20,7 +20,9 @@ function Card({ item }) {
   return (
     <div className="property-card">
       <div className="image-section">
+        <Link to="/:id" className="img_link">
         <img src={mainImage} alt={item.title} className="main-image" />
+        </Link>
         <span className="badge must-see">* Must See</span>
 
         <div className="thumbnails">
@@ -53,20 +55,22 @@ function Card({ item }) {
               {" "}
               <img src="/pin.png" alt="" /> {item.address}
             </p>
-            <p className="description">{item.description}</p>
+            {/* <p className="description">{item.description}</p> */}
           </div>
           <div className="right">
             <span>
               {" "}
               <p className="price">₦ {item.price.toLocaleString()}</p>
             </span>
-            <p>PID : 2MKHX</p>
+            <p>SID : 2MKHX</p>
             <div className="heart">
               <BsBookmarkHeart />
             </div>
 
-            <div className="sponsored-badge">Sponsored <FaFire /></div>
-            <div className="actions">
+            
+
+            {/* <div className="sponsored-badge">Sponsored <FaFire /></div> */}
+            {/* <div className="actions">
               <button className="btn call">
                 <a className="" href="tel:+2348147618725">
                   <FaPhoneAlt />  call
@@ -74,16 +78,12 @@ function Card({ item }) {
               </button>
               <button className="btn whatsapp">
                 <a href="https://wa.me/2348147618725" target="_blank" rel="noopener noreferrer">
-                  <IoLogoWhatsapp />
+                  <IoLogoWhatsapp /> Whatsapp
                 </a>
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
-
-        {/* <div className="condition">
-
-          </div> */}
 
         <div className="new-listing">
           <ul>
@@ -101,7 +101,13 @@ function Card({ item }) {
           </ul>
         </div>
 
-        <div className="features">
+        {/* <div className="condition">
+
+          </div> */}
+
+      
+
+        {/* <div className="features">
           <span>
             <p>Size:</p> {item.size} sqft
           </span>
@@ -117,7 +123,7 @@ function Card({ item }) {
           <span>
             <p>longitude:</p> {item.longitude}
           </span>
-        </div>
+        </div> */}
       </div>
       
     </div>

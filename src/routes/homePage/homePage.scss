@@ -22,12 +22,12 @@
 .hero_holder {
   width: 100%;
   height: auto;
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
   padding-top: 100px;
-  padding-bottom: 30px;
+  padding-bottom: 66px;
 
   animation: backgroundCycle 20s infinite;
   position: relative;
@@ -66,9 +66,14 @@
 }
 .hero_holder .heading h1 {
   font-weight: 800;
-    color: white;
-  font-size: 3.0rem;
+    color: #FFF8F4;
+  font-size: 3.5rem;
   padding-top: 50px;
+  text-transform: capitalize;
+}
+
+.hero_holder .heading h1 span {
+  background-color: #0DAE64;
 }
 
 .hero_holder .heading p {
@@ -119,13 +124,3 @@
   50% { opacity: 0; }
 }
 
-.homecard {
- padding-left: 25px;
- display: flex;
-
- .chat {
-  position: fixed;
-  top: 30%;
-  right: 3%;
- }
-}

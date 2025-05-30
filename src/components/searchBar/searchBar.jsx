@@ -3,24 +3,23 @@ import './searchBar.scss';
 import { Link } from "react-router-dom";
 
 const propertyOptions = [
-  "Rent Shop",
+  // "Rent Shop",
   "Buy Shop",
-  "Rent Office Space",
-  "Buy Office Space",
-  "Rent Warehouse",
-  "Buy Warehouse",
+  // "Rent Office Space",
+  // "Buy Office Space",
+  // "Rent Warehouse",
+  // "Buy Warehouse",
 ];
 
 const shopTypeOptions = [
-  "Supermarket",
-  "Boutique",
-  "Pharmacy",
-  "Electronics",
-  "Salon",
-  "Barber Shop",
-  "Bakery",
-  "Restaurant",
-  "Mobile & Accessories",
+  "Shop Type",
+  "12 SQM",
+  "16 SQM",
+  "20 SQM",
+  "60 SQM",
+  "35 SQM",
+  "50 SQM",
+  "2 SQM",
 ];
 
 
