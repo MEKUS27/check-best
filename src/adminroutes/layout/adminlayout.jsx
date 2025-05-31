@@ -2,7 +2,7 @@ import './layout.scss';
 
 import { Outlet } from "react-router-dom";
 import DashboardNavbar from "../../components/navbar/DashboardNavbar"
-import Footer from "../../components/footer/Footer";
+// import Footer from "../../components/footer/Footer";
 import Menu from "../../components/menu/Menu";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
@@ -22,7 +22,7 @@ const Layout = () => {
           </QueryClientProvider>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

@@ -1,17 +1,17 @@
 .chat {
   width: 100%;
   max-width: 400px;
-  height: 75vh;
+  height: 60vh;
   margin: auto;
   display: flex;
   flex-direction: column;
   background-color: #fff;
   // border: 1px solid #ccc;
   font-family: "Segoe UI", sans-serif;
-  position: fixed;
-  top: 23%;
-  right: 4%;
-  z-index: 9;
+  // position: fixed;
+  // top: 34%;
+  // right: 4%;
+  // z-index: 9;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.171);
 
 
@@ -43,6 +43,15 @@
     // Modern scrollbar styling (WebKit Browsers)
     &::-webkit-scrollbar {
       width: 8px;
+    }
+
+    .center_img {
+      width: 200px;
+      position: fixed;
+      top: 56%;
+      left: 16%;
+      opacity: 0.1;
+      transition: opacity 0.3s ease;
     }
   
     &::-webkit-scrollbar-track {
@@ -191,7 +200,7 @@
 
 .modal-content {
   position: relative;
-  top: 5%;
+  top: 7%;
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
@@ -213,21 +222,21 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    background: #111;
-    color: white;
+    background: transparent;
+    color: #000;
     border: none;
     border-radius: 50%;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     width: 32px;
     height: 32px;
     cursor: pointer;
     line-height: 32px;
     text-align: center;
-    transition: background 0.2s;
+    transition: all 0.2s ease;
   }
 
   .close-btn:hover {
-    background: #333;
+    // background: #333;
   }
 }
 

@@ -3,6 +3,7 @@ import './shop.scss'
 import { listData } from "../../lib/dummydata";
 import Card from "../../components/card/Card";
 
+
 // Link
 
 function Shop(){

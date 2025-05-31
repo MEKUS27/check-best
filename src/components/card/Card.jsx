@@ -4,6 +4,8 @@ import "./card.scss";
 import { FaStar, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaFire } from "react-icons/fa";
+import { FaSquarePhone } from "react-icons/fa6";
+
 
 
 import { BsBookmarkHeart } from "react-icons/bs";
@@ -70,18 +72,18 @@ function Card({ item }) {
             
 
             {/* <div className="sponsored-badge">Sponsored <FaFire /></div> */}
-            {/* <div className="actions">
+            <div className="actions">
               <button className="btn call">
-                <a className="" href="tel:+2348147618725">
-                  <FaPhoneAlt />  call
+                <a className="phone" href="tel:+2348147618725">
+                  <FaSquarePhone />  
                 </a>
               </button>
               <button className="btn whatsapp">
-                <a href="https://wa.me/2348147618725" target="_blank" rel="noopener noreferrer">
-                  <IoLogoWhatsapp /> Whatsapp
+                <a className="whatsapp" href="https://wa.me/2348147618725" target="_blank" rel="noopener noreferrer">
+                  {/* <IoLogoWhatsapp />  */}
                 </a>
               </button>
-            </div> */}
+            </div>
           </div>
         </div>
 

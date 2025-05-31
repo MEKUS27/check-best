@@ -43,6 +43,7 @@ function Chat() {
       <div className="chat-header">Live Chat Admin</div>
 
       <div className="messages">
+        {/* <img className="center_img" src="/logo.jpg" alt="" /> */}
         {messages.map((msg, idx) => (
           <div className={`message ${msg.sender}`} key={idx}>
             {msg.text && <p>{msg.text}</p>}

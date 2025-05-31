@@ -8,6 +8,7 @@ import { listData } from "../../lib/dummydata";
 import Chat from "../../components/chat/Chat";
 import Map from "../../components/map/Map";
 import { Link } from "react-router-dom";
+import Footer from "../../components/HomePageFooter/Footer";
 
 const phrases = [
   "Shop",
@@ -19,6 +20,7 @@ const phrases = [
 
 function HomePage() {
   const data = listData;
+  const currentItems = listData.slice();
 
   const [text, setText] = useState("");
   const [currentPhrase, setCurrentPhrase] = useState(0);
@@ -77,7 +79,13 @@ function HomePage() {
           </div>
         </div>
       </div>
-     
+     <div className="Hcard">
+     {currentItems.map((item) => (
+            <Card key={item.id} item={item} />
+          ))}
+     </div>
+
+     <Footer />
     </>
   );
 }

@@ -23,6 +23,7 @@ import InterestPage from "./routes/InterestPage/InterestPage";
 import PaymentPage from "./routes/payment/paymentPage";
 import Shop from "./routes/shop/shop";
 import Aboutus from "./routes/AboutUs/Aboutus";
+import Contact from "./routes/Contact/contact";
 
 function App() {
   const router = createBrowserRouter([
@@ -37,6 +38,7 @@ function App() {
         { path: "interest", element: <InterestPage />},
         { path: "shop", element: <Shop />},
         { path: "aboutus", element: <Aboutus />},
+        { path: "contact", element: <Contact />},
         { path: "payment", element: <PaymentPage />},
         { path: "login", element: <Login /> },
         { path: "register", element: <Register /> },

@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { GiSydneyOperaHouse } from "react-icons/gi";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import { NavLink } from "react-router-dom";
+
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -33,39 +35,26 @@ function Navbar() {
           </div>
 
           <div className="ul-link">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/aboutus">About Us</a>
-            </li>
-            <li>
-              <a href="/list">Shops</a>
-            </li>
-            {/* <li>
-              <a href="">Shortlet</a>
-            </li>
-            <li>
-              <a href="">Services</a>
-            </li>
-            <li>
-              <a href="">Agent</a>
-            </li>
-            <li>
-              <a href="">Area Guide</a>
-            </li> */}
-            <li>
-              <a href="/interest">Interest Form</a>
-            </li>
-            <li>
-              <a href="">Contact Admin</a>
-            </li>
+  <li>
+    <NavLink to="/" end className={({ isActive }) => isActive ? "active-link" : ""}>Home</NavLink>
+  </li>
+  <li>
+    <NavLink to="/aboutus" className={({ isActive }) => isActive ? "active-link" : ""}>About Us</NavLink>
+  </li>
+  <li>
+    <NavLink to="/list" className={({ isActive }) => isActive ? "active-link" : ""}>Shops</NavLink>
+  </li>
+  <li>
+    <NavLink to="/interest" className={({ isActive }) => isActive ? "active-link" : ""}>Interest Form</NavLink>
+  </li>
+  <li>
+    <NavLink to="/contact" className={({ isActive }) => isActive ? "active-link" : ""}>Contact Admin</NavLink>
+  </li>
+</div>
 
-            {/* <hr /> */}
-          </div>
         </div>
         <div className="nav_btn">
-          <Link to="">
+          <Link to="/profile">
             <button className="btn_one">My Profile</button>
           </Link>
           <Link to="/login">

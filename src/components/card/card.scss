@@ -99,7 +99,7 @@
             font-weight: 700;
             font-family: "Raleway", sans-serif;
 
-          color: #0DAE64;
+          color: #6792BD;
           margin-bottom: 0px;
           padding-right: 10px;
   
@@ -169,6 +169,11 @@
                     height: 20px;
                     cursor: pointer;
                     color: #0DAE64;
+
+                    &:hover {
+                      color: #0DAE64;
+                      transition: all 0.3s ease;
+                    }
                 }
             }
 
@@ -276,52 +281,64 @@
         }
       }
   
-      // .actions {
-      //   display: flex;
-      //   gap: 10px;
-      //   // position: relative;
+      .actions {
+        display: flex;
+        gap: 10px;
+        // position: relative;
   
-      //   .btn {
-      //   //   padding: 8px 12px;
-      //     border-radius: 5px;
-      //   //   font-size: 17px;
-      //     border: none;
-      //     display: flex;
-      //     align-items: center;
-      //     gap: 5px;
-      //     cursor: pointer;
-      //     position: relative;
+        .btn {
+        //   padding: 8px 12px;
+          border-radius: 5px;
+        //   font-size: 17px;
+          border: none;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          cursor: pointer;
+          position: relative;
+
+          .phone {
+            color: #6792BD;
+            
+          }
   
-      //     &.call {
-      //       background: #0066cc;
-      //       color: white;
-      //       position: absolute;
-      //         top: 156%;
-      //         font-size: 10px;
-      //         gap: 5px;
+          &.call {
+            background: transparent;
+            color: #0047b3;
+            position: absolute;
+            position: absolute;
+            top: -95%;
+            right: 2%;
+              font-size: 10px;
+              gap: 5px;
 
-      //     }
+          }
   
-      //     &.whatsapp {
-      //       border: 1px solid #25d366;
-      //       background-color: white;
-      //       color: #25d366 !important;
-      //       position: absolute;
-      //       top: 62%;
-      //       right: 20%;
-      //     }
+          &.whatsapp {
+            // border: 1px solid #25d366;
+            // background-color: white;
+            color: #0047b3 !important;
+            position: absolute;
+            top: 30%;
+            right: 20%;
+          }
 
-      //     svg {
-      //       width: 18px;
-      //       height: 18px;
-      //     }
-      //   }
+          svg {
+            width: 27px;
+            height: 27px;
 
-      //   a {
-      //       color: #fff;
-      //       text-decoration: none;
-      //   }
-      // }
+            &:hover {
+              color: #2c8ef0;
+              transition: all 0.3s ease;
+            }
+          }
+        }
+
+        .whatsapp {
+            color: #0DAE64;
+            text-decoration: none;
+        }
+      }
     }
   }
   

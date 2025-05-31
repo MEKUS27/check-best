@@ -75,7 +75,7 @@ function PaymentPage() {
         {paymentMethod === 'bank' && (
           <div className="bank-info-box">
             <p><strong>Bank Name:</strong> GTBank</p>
-            <p><strong>Account Name:</strong> Ariaria Market Ltd</p>
+            <p><strong>Account Name:</strong> CHECK-BEST INTERNATIONAL LTD</p>
             <p><strong>Account Number:</strong> 0123456789</p>
             <p className="note">Please transfer the exact amount and send the transfer receipt to the admin Thanks.</p>
           </div>

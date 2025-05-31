@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './interestPage.scss';
+import Footer from "../../components/HomePageFooter/Footer";
 
 function InterestPage() {
   const [passport, setPassport] = useState(null);
@@ -114,7 +115,8 @@ function InterestPage() {
   };
 
   return (
-    <div className="interest">
+  <>
+      <div className="interest">
       <div className="interestPage position-relative">
 
         <div className="logo">
@@ -314,6 +316,9 @@ function InterestPage() {
         </form>
       </div>
     </div>
+
+    <Footer />
+  </>
   );
 }
 

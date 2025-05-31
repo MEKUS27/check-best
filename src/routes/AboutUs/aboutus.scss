@@ -2,20 +2,45 @@
     width: 80%;
     margin: auto;
     margin-top: 100px;
-
+    
 
 
     
   .image {
-    max-height: 300px;
+    width: auto;
+    height: 320px;
     overflow: hidden;
     border-radius: 2px;
     margin-bottom: 2rem;
+    padding: 30px;
+    background-image: url("/images/bg3.jpg");
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 
-    img {
-      object-fit: cover;
-      height: 100%;
+    h1 {
+    font-weight: 800;
     }
+
+    .text {
+        text-align: center;
+           color: #fff;
+
+           p {
+            font-weight: 600;
+            // color: #FFD700;
+           }
+
+    }
+
+
+    // img {
+    //   object-fit: cover;
+    //   height: 100%;
+    // }
   }
 
   .about-text {
@@ -25,8 +50,12 @@
 
     h2 {
       font-size: 1.5rem;
-      color: #333;
+      color: #fff;
       margin-bottom: 1rem;
+      background-color: #FFD700;
+      width: max-content;
+      padding: 7px;
+      border-radius: 3px;
     }
 
     p {
@@ -50,6 +79,7 @@
       font-size: 2rem;
       margin-bottom: 2rem;
       color: #222;
+      
     }
   
     .offer-list {

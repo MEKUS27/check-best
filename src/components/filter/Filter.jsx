@@ -33,10 +33,10 @@ function Filter() {
           <label className="form-label">Type</label>
           <select className="form-select">
             <option>All Types</option>
-            <option>Mini Shop</option>
+            <option>Shop</option>
             <option>Warehouse</option>
-            <option>Retail</option>
-            <option>Office</option>
+            {/* <option>Retail</option>
+            <option>Office</option> */}
           </select>
         </div>
 
@@ -44,11 +44,13 @@ function Filter() {
           <label className="form-label">Shop Sizes</label>
           <select className="form-select">
             <option>Any Size</option>
-            <option>861 sqft</option>
-            <option>761 sqft</option>
-            <option>661 sqft</option>
-            <option>561 sqft</option>
-            <option>461 sqft</option>
+            <option>2 SQM</option>
+            <option>12 SQM</option>
+            <option>16 SQM</option>
+            <option>20 SQM</option>
+            <option>35 SQM</option>
+            <option>50 SQM</option>
+            <option>60 SQM</option>
           </select>
         </div>
 
@@ -56,10 +58,9 @@ function Filter() {
           <label className="form-label">Min price</label>
           <select className="form-select">
             <option>Any Price</option>
-            <option>₦100,000</option>
-            <option>₦200,000</option>
-            <option>₦300,000</option>
-            <option>₦400,000+</option>
+            <option>₦ 2, 000,000</option>
+            <option>₦ 4, 000,000</option>
+            <option>₦ 8, 000,000</option>
 
           </select>
         </div>
@@ -68,10 +69,10 @@ function Filter() {
           <label className="form-label">Max price</label>
           <select className="form-select">
             <option>Any Price</option>
-            <option>₦500,000</option>
-            <option>₦600,000</option>
-            <option>₦700,000</option>
-            <option>₦800,000+</option>
+            <option>₦ 14, 000,000</option>
+            <option>₦ 22, 000, 000</option>
+            <option>₦ 40, 000, 000+</option>
+            {/* <option>₦800,000+</option> */}
 
 
           </select>

@@ -1,112 +1,111 @@
 @import "../../reponsive.scss";
-
 .profilePage {
     display: flex;
-    height: 100%;
-
-    @include md {
-        flex-direction: column;
-        overflow: scroll;
-    }
-
-    @include sm {
-        padding-right: 0px;
-        scrollbar-width: none;
-
-    }
-
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f7f8fa;
+    margin-top:70px;
   
     .details {
-        flex: 3;
-        overflow-y: scroll;
-    scrollbar-width: none;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 16px;
+    border: 1px solid;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 
-        padding-top: 50px;
-        
-        @include md {
-            flex: none;
-            height: max-content;
+      .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+    
+        h1 {
+          font-size: 24px;
+          font-weight: 400;
+          color: #333;
         }
-
-        
-        
-
-        .wrapper{
-            padding-right: 50px;
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-
-            @include sm {
-                padding-right: 0px;
-
-            }
-
-            .title {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                h1 {
-                    font-weight: 300;
-                }
-
-                button {
-                    padding: 12px 24px;
-                    background-color: #fece51;
-                    cursor: pointer;
-                    border: none;
-                    border-radius: 5px;
-                }
-            }
-
-            .info {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-
-                span {
-                    display: flex;
-                    align-items: center;
-                    gap: 20px;
-                }
-
-
-                button {
-                    width: 100px;
-                    background-color: teal;
-                    border: none;
-                    color: white;
-                    padding: 10px 20px;
-                    cursor: pointer;
-                    border-radius: 5px;
-                }
-
-                img {
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    object-fit: cover;
-                }
-            }
+    
+        .updateBtn {
+          padding: 10px 20px;
+          background-color: #0DAE64;
+          color: #fff;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          
+          &:hover {
+            background-color: #1b4f72;
+          }
         }
-       
+      }
+    
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    
+        .avatar {
+          display: flex;
+          align-items: center;
+        //   flex-direction: column;
+          gap: 10px;
+    
+          img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 5%;
+            border: 2px solid #ddd;
+          }
+        }
+    
+        span {
+          font-size: 18px;
+          color: #555;
+    
+          b {
+            color: #222;
+            font-weight: 500;
+          }
+        }
+    
+        .logoutBtn {
+          margin-top: 20px;
+          padding: 7px 20px;
+          background-color: #e74c3c;
+          color: #fff;
+          border: none;
+          border-radius: 3px;
+          cursor: pointer;
+          width: fit-content;
+          font-weight: 600;
+    
+          &:hover {
+            background-color: #c0392b;
+          }
+        }
+      }
     }
+  
+    
+    .savedList {
+        width: max-content;
 
-    .chatContainer {
-        flex:2;
-        background-color: #fcf5f3;
-        height: 100%;
-
-        @include md {
-            flex: none;
-            height: max-content;
+        h1 {
+            font-size: 22px;
+            font-weight: 400;
+            // margin: 0;
         }
 
-
-        .wrapper {
-            padding: 0px 20px;
-            height: 100%;
+        p {
+            color: #0DAE64;
+            font-weight: 500;
         }
     }
-}
+   
+      
+  }
+  

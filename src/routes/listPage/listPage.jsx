@@ -3,6 +3,8 @@ import Card from '../../components/card/Card';
 import Filter from '../../components/filter/Filter';
 import { listData } from '../../lib/dummydata';
 import './listPage.scss';
+import Footer from "../../components/HomePageFooter/Footer";
+
 
 function ListPage() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -19,7 +21,8 @@ function ListPage() {
   };
 
   return (
-    <div className='listPage'>
+   <>
+     <div className='listPage'>
       <div className='listContainer'>
         <div className='wrapper'>
           {currentItems.map((item) => (
@@ -48,6 +51,9 @@ function ListPage() {
         <Filter />
       </div>
     </div>
+
+    <Footer />
+   </>
   );
 }
 
