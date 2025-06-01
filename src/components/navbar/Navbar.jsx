@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./navbar.scss";
-import { Link } from "react-router-dom";
-import { GiSydneyOperaHouse } from "react-icons/gi";
-import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import { NavLink } from "react-router-dom";
-
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const { currentUser } = useContext(AuthContext);
+  const number = 2; 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,53 +16,84 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
-  // const user = true;
   return (
-    <div>
     <div className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="holdnav">
         <div className="left">
           <div className="logo">
             <Link to="/" className="link">
-              {" "}
-              {/* <GiSydneyOperaHouse /> CheckBest */}
-              <img src="/logo.jpg" alt="" />
+              <img src="/logo.jpg" alt="Logo" />
             </Link>
           </div>
 
-          <div className="ul-link">
-  <li>
-    <NavLink to="/" end className={({ isActive }) => isActive ? "active-link" : ""}>Home</NavLink>
-  </li>
-  <li>
-    <NavLink to="/aboutus" className={({ isActive }) => isActive ? "active-link" : ""}>About Us</NavLink>
-  </li>
-  <li>
-    <NavLink to="/list" className={({ isActive }) => isActive ? "active-link" : ""}>Shops</NavLink>
-  </li>
-  <li>
-    <NavLink to="/interest" className={({ isActive }) => isActive ? "active-link" : ""}>Interest Form</NavLink>
-  </li>
-  <li>
-    <NavLink to="/contact" className={({ isActive }) => isActive ? "active-link" : ""}>Contact Admin</NavLink>
-  </li>
-</div>
-
+          <ul className="ul-link">
+            <li>
+              <NavLink
+                to="/"
+                end
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/aboutus"
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                About Us
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/list"
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                Shops
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/interest"
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                Interest Form
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                Contact Admin
+              </NavLink>
+            </li>
+          </ul>
         </div>
-        <div className="nav_btn">
-          <Link to="/profile">
-            <button className="btn_one">My Profile</button>
-          </Link>
-          <Link to="/login">
-            <button className="btn_two">Log in</button>
-          </Link>
-          {/* <a href=""><button className='btn_two'>Add Listing <GoArrowUpRight /></button></a> */}
+
+        <div className="right">
+          {currentUser ? (
+            <div className="user">
+              <div>
+              <img className="userAvater" src={currentUser.avatar || "/noavatar.jpg"} alt="User Avatar" />
+              <span>{currentUser.username}</span>
+              </div>
+              <Link to="/profile" className="profile">
+                <span>Profile</span>
+                {number > 0 && <div className="notification">{number}</div>}
+              </Link>
+            </div>
+          ) : (
+            <div className="sign-links">
+              <Link to="/login" className="auth_signin">Sign in</Link>
+              <Link to="/register" className="register">
+                Sign up
+              </Link>
+            </div>
+          )}
         </div>
       </div>
-    
     </div>
-  </div>
   );
 }
 

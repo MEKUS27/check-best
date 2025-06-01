@@ -1,11 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import List from "../../components/list/List";
 import "./profilePage.scss";
 import apiRequest from "../../lib/apiRequest";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 
 function ProfilePage() {
+
+  const {updateUser, currentUser} = useContext(AuthContext)
+
   const navigate = useNavigate();
+
+
+  
+
   const [savedItems, setSavedItems] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
@@ -13,7 +21,7 @@ function ProfilePage() {
   const handleLogout = async () => {
     try {
       await apiRequest.post("/auth/logout");
-      localStorage.removeItem("user");
+      updateUser(null)
       navigate("/");
     } catch (err) {
       console.log(err);
@@ -32,7 +40,6 @@ function ProfilePage() {
     fetchSaved();
   }, []);
 
-  // Pagination calculations based on savedItems
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = savedItems.slice(indexOfFirstItem, indexOfLastItem);
@@ -48,21 +55,23 @@ function ProfilePage() {
         <div className="wrapper">
           <div className="title">
             <h1>Profile Information</h1>
+            <Link to="/profile/update">
             <button className="updateBtn">Update Profile</button>
+            </Link>
           </div>
           <div className="info">
             <span className="avatar">
               Avatar:{" "}
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC3SDs_X1Hu7wtIHG-f_F6fq932zHgCsGbNw&s"
+                src={currentUser.avatar || "noavatar.jpg"}
                 alt="User Avatar"
               />
             </span>
             <span>
-              Username: <b>Chukwuma Eze</b>
+              Username: <b>{currentUser.username}</b>
             </span>
             <span>
-              E-mail: <b>chukwuma@gmail.com</b>
+              E-mail: <b>{currentUser.email}</b>
             </span>
             <span>
               Phone: <b>070229481275</b>

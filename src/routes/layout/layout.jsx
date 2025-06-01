@@ -1,8 +1,10 @@
+// import React, { useContext, useEffect } from "react";
 // import "./layout.scss";
 // import Navbar from "../../components/navbar/Navbar";
-// import { Outlet } from "react-router-dom";
+// import { Navigate, Outlet } from "react-router-dom";
+// import { AuthContext } from "../../context/AuthContext";
 
-// function Layout() {
+// const layout = () => {
 //   return (
 //     <div className="layout">
 //       <div className="navbar">
@@ -13,16 +15,43 @@
 //       </div>
 //     </div>
 //   );
-// }
+// };
 
-// export default Layout;
+// const RequireAuth = () => {
+//   const { currentUser } = useContext(AuthContext);
 
-import React from "react";
+//   // if(!user) {
+//   //   return <Navigate to="/login" />
+//   // }
+
+//   // useEffect(()=> {
+//   //   if(!currentUser) {
+
+//   //   }
+//   // }, [currentUser])
+//   return !currentUser ? (
+//     <Navigate to="/login" />
+//   ) : (
+//     <div className="layout">
+//       <div className="navbar">
+//         <Navbar />
+//       </div>
+//       <div className="content">
+//         <Outlet />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default { layout, RequireAuth };
+
+import React, { useContext } from "react";
 import "./layout.scss";
 import Navbar from "../../components/navbar/Navbar";
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 
-const layout = () => {
+export function Layout() {
   return (
     <div className="layout">
       <div className="navbar">
@@ -33,6 +62,15 @@ const layout = () => {
       </div>
     </div>
   );
-};
+}
 
-export default layout;
+export function RequireAuth() {
+  const { currentUser } = useContext(AuthContext);
+
+  return !currentUser ? (
+    <Navigate to="/login" />
+  ) : (
+    <Layout />
+  );
+}
+

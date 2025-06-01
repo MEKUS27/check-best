@@ -1,10 +1,15 @@
 import Homepage from "./routes/homePage/homePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ListPage from "./routes/listPage/listPage";
-import Layout from "./routes/layout/layout";
-import AdminLayout from "./adminroutes/layout/adminlayout"; // ✅ Capitalized
+import { Layout, RequireAuth } from "./routes/layout/layout";
+
+// when projecting the route i should remove this
+// import  Layout from "./routes/layout/layout";
+
+import AdminLayout from "./adminroutes/layout/adminlayout";
 import SignlePage from "./routes/signlePage/signlePage";
 import ProfilePage from "./routes/profilePage/profilePage";
+import ProfileUpdatePage from "./routes/profileUpdatePage/ProfileUpdatePage"
 import Login from "./routes/login/login";
 import Register from "./routes/register/register";
 import Home from "./adminroutes/home/home";
@@ -34,14 +39,27 @@ function App() {
         { path: "/", element: <Homepage /> },
         { path: "list", element: <ListPage /> },
         { path: ":id", element: <SignlePage /> },
-        { path: "profile", element: <ProfilePage /> },
-        { path: "interest", element: <InterestPage />},
-        { path: "shop", element: <Shop />},
-        { path: "aboutus", element: <Aboutus />},
-        { path: "contact", element: <Contact />},
-        { path: "payment", element: <PaymentPage />},
+        { path: "interest", element: <InterestPage /> },
+        { path: "shop", element: <Shop /> },
+        { path: "aboutus", element: <Aboutus /> },
+        { path: "contact", element: <Contact /> },
+        { path: "payment", element: <PaymentPage /> },
         { path: "login", element: <Login /> },
         { path: "register", element: <Register /> },
+        {
+          path: "profile",
+          element: <RequireAuth />,
+          children: [
+            {
+              path: "/profile",
+              element: <ProfilePage />,
+            },
+            {
+              path: "/profile/update",
+              element: <ProfileUpdatePage />,
+            }
+          ]
+        },
       ],
     },
     {
@@ -53,15 +71,13 @@ function App() {
         { path: "users", element: <Users /> },
         { path: "product", element: <Product /> },
         { path: "products", element: <Products /> },
-        { path: "addshop", element: <Addshop />},
-        { path: "avaliableshops", element: <Avaliableshops />},
-        { path: "client", element: <Client />},
-        { path: "addClient", element: <AddClient />},
-        { path: "clientRequest", element: <ClientRequest />},
-        { path: "message", element: <Message />},
-        { path: "adminprofile", element: <Adminprofile />}
-        
-        
+        { path: "addshop", element: <Addshop /> },
+        { path: "avaliableshops", element: <Avaliableshops /> },
+        { path: "client", element: <Client /> },
+        { path: "addClient", element: <AddClient /> },
+        { path: "clientRequest", element: <ClientRequest /> },
+        { path: "message", element: <Message /> },
+        { path: "adminprofile", element: <Adminprofile /> },
       ],
     },
   ]);
